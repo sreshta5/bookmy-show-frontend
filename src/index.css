@@ -1,42 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* BookMyShow Design System - Modern Cinema Experience */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Brand Colors */
+    --background: 210 11% 7%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 210 11% 9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 11% 9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* BookMyShow Signature Red */
+    --primary: 0 85% 56%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 11% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 11% 12%;
+    --muted-foreground: 210 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 11% 15%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 62% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 11% 15%;
+    --input: 210 11% 15%;
+    --ring: 0 85% 56%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Cinema-specific colors */
+    --seat-available: 120 100% 40%;
+    --seat-selected: 45 100% 50%;
+    --seat-booked: 0 60% 45%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 85% 56%), hsl(340 85% 56%));
+    --gradient-card: linear-gradient(145deg, hsl(210 11% 9%), hsl(210 11% 12%));
+    --gradient-glass: linear-gradient(145deg, hsl(210 11% 9% / 0.8), hsl(210 11% 12% / 0.6));
+    
+    /* Shadows */
+    --shadow-cinema: 0 25px 50px -12px hsl(0 85% 56% / 0.25);
+    --shadow-card: 0 10px 30px -10px hsl(210 11% 4% / 0.5);
+    --shadow-glow: 0 0 40px hsl(0 85% 56% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +121,62 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+}
+
+@layer components {
+  /* Cinema UI Components */
+  .seat {
+    @apply w-6 h-6 rounded-sm cursor-pointer transition-all duration-200 border;
+  }
+  
+  .seat-available {
+    @apply bg-green-500 border-green-400 hover:bg-green-400;
+  }
+  
+  .seat-selected {
+    @apply bg-yellow-500 border-yellow-400 shadow-md;
+  }
+  
+  .seat-booked {
+    @apply bg-red-500 border-red-400 cursor-not-allowed opacity-70;
+  }
+  
+  .movie-card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(10px);
+  }
+  
+  .shadow-cinema {
+    box-shadow: var(--shadow-cinema);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
   }
 }

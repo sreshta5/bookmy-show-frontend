@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "title": "Avengers: Endgame",
+    "genre": ["Action", "Adventure", "Drama"],
+    "language": "English",
+    "duration": "181 min",
+    "rating": 8.4,
+    "poster": "/src/assets/avengers-endgame.jpg",
+    "releaseDate": "2024-04-26",
+    "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more to undo Thanos' actions and restore order to the universe.",
+    "cast": ["Robert Downey Jr.", "Chris Evans", "Mark Ruffalo", "Chris Hemsworth"],
+    "director": "Anthony Russo, Joe Russo",
+    "trailer": "https://www.youtube.com/watch?v=TcMBFSGVi1c"
+  },
+  {
+    "id": "2",
+    "title": "Oppenheimer",
+    "genre": ["Biography", "Drama", "History"],
+    "language": "English",
+    "duration": "180 min",
+    "rating": 8.6,
+    "poster": "/src/assets/oppenheimer.jpg",
+    "releaseDate": "2024-07-21",
+    "description": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb during World War II.",
+    "cast": ["Cillian Murphy", "Emily Blunt", "Matt Damon", "Robert Downey Jr."],
+    "director": "Christopher Nolan",
+    "trailer": "https://www.youtube.com/watch?v=uYPbbksJxIg"
+  },
+  {
+    "id": "3",
+    "title": "Spider-Man: Into the Spider-Verse",
+    "genre": ["Animation", "Action", "Adventure"],
+    "language": "English",
+    "duration": "117 min",
+    "rating": 8.4,
+    "poster": "/src/assets/spiderman.jpg",
+    "releaseDate": "2024-12-14",
+    "description": "Teen Miles Morales becomes Spider-Man of his reality, crossing his path with five counterparts from other dimensions to stop a threat for all realities.",
+    "cast": ["Shameik Moore", "Jake Johnson", "Hailee Steinfeld", "Mahershala Ali"],
+    "director": "Bob Persichetti, Peter Ramsey",
+    "trailer": "https://www.youtube.com/watch?v=tg52up16eq0"
+  },
+  {
+    "id": "4",
+    "title": "Dune",
+    "genre": ["Adventure", "Drama", "Sci-Fi"],
+    "language": "English",
+    "duration": "155 min",
+    "rating": 8.0,
+    "poster": "/src/assets/dune.jpg",
+    "releaseDate": "2024-10-22",
+    "description": "A noble family becomes embroiled in a war for control over the galaxy's most valuable asset while its heir becomes troubled by visions of a dark future.",
+    "cast": ["Timothée Chalamet", "Rebecca Ferguson", "Oscar Isaac", "Josh Brolin"],
+    "director": "Denis Villeneuve",
+    "trailer": "https://www.youtube.com/watch?v=n9xhJrPXop4"
+  }
+]
